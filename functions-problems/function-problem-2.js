@@ -74,7 +74,7 @@ console.log(findVowels(myString))
 //I caught some of my syntax errors and fixed the function. 
 //I remembered that a sentence could start with "I" and not work, so I changed the string to use the .toLowerCase method. 
 //This prompted me to realize that I could equate the string to a lowercase vowel within the if statement. 
-
+/*
 const myFunction = userString => {
  
   userString = userString.toLowerCase()
@@ -99,3 +99,26 @@ const myFunction = userString => {
 };
 
 console.log(myFunction("Whatever I want to write."))
+*/
+
+
+
+//SECOND Attempt
+//Took TJ's feedback to simplify the function by adding an array of vowels.
+
+const myFunction = userString => {
+ 
+  userString = userString.toLowerCase()
+  let splitString = userString.split("");
+  let vowelsArray = ["a", "e", "i", "o", "u"];
+  let vowelCounter = 0;
+ 
+  for (let i = 0; i < splitString.length; i++) {
+    if (vowelsArray.includes(splitString[i])) {
+      vowelCounter++
+    }
+  }
+  return vowelCounter
+};
+
+console.log(myFunction("aa ee ii oo uu"))
