@@ -8,7 +8,7 @@
 let citiesArray = ["Tokyo", "London", "Paris", "Prague", "Chicago"];
 
 const joinArray = arrayInput => {
-	return arrayInput.join()
+	return arrayInput.join(", ")
 };
 
 console.log(joinArray(citiesArray));
