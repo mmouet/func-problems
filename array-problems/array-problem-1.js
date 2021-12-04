@@ -12,8 +12,7 @@
 let citiesArray = ["Tokyo", "London", "Paris", "Prague", "Chicago"];
 
 const sliceArray = (array, n) => {
-  array = array.slice(0, n);
-  return array;
+  return array.slice(0, n); 
 };
 
 console.log(sliceArray(citiesArray, 2));

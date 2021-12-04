@@ -9,9 +9,8 @@
 // Turn array into string and then back into an array? 
 
 
-let numArray = [1,2,2,3,3,3,4,5,5,];
-let citiesArray = ["Tokyo", "Tokyo", "CHICAGO", "Prague", "Chicago", "CHICAGO"];
-
+// ATTEMPT 1	
+/*
 const removeDup = arrayInput => {
   if (typeof arrayInput[0] != 'number') {
 	const newStr = arrayInput.toString();
@@ -36,6 +35,36 @@ const removeDup = arrayInput => {
 	};
   return newArray
   }
+};
+*/
+
+// TJ revision 
+// Only need to declare 'newArray' once at the top since both conditionals use it
+// Only need to 'return' once at bottom since both conditional return the same 
+// Can chain multiple methods together instead of calling them individually
+
+
+let numArray = [1,2,2,3,3,3,4,5,5,];
+let citiesArray = ["Tokyo", "Tokyo", "CHICAGO", "Prague", "Chicago", "CHICAGO"];
+
+const removeDup = arrayInput => {
+    let newArray = []
+    if (typeof arrayInput[0] != 'number') {
+        const lowerCaseArrayOfNumbers = arrayInput.toString().toLowerCase().split(","); 
+    
+       for (let i = 0; i < lowerCaseArrayOfNumbers.length; i++) {
+          if (!newArray.includes(lowerCaseArrayOfNumbers[i])) {
+             newArray.push(lowerCaseArrayOfNumbers[i])
+          }
+       };
+    } else {    
+        for (let i = 0; i < arrayInput.length; i++) {
+            if (!newArray.includes(arrayInput[i])) {
+                newArray.push(arrayInput[i])
+            }
+       };
+    }
+  return newArray
 };
 
 console.log(removeDup(numArray));

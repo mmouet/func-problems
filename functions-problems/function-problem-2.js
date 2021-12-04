@@ -122,3 +122,28 @@ const myFunction = userString => {
 };
 
 console.log(myFunction("aa ee ii oo uu"))
+
+
+
+//THIRD Attempt
+//Changed function name to findVowelsFunc
+//Declared lowerCaseString within function
+//More accurately described variable splitString by naming it userArray
+//Made vowelsArray a const
+
+
+const = findVowelsFunc = userString => {
+  let lowerCaseString = userString.toLowerCase()
+  let userArray = lowerCaseString.split("");
+  const vowelsArray = ["a", "e", "i", "o", "u"];
+  let vowelCounter = 0;
+ 
+  for (let i = 0; i < userArray.length; i++) {
+    if (vowelsArray.includes(userArray[i])) {
+      vowelCounter++
+    }
+  }
+  return vowelCounter
+};
+
+console.log(findVowelsFunc("aa ee ii oo uu"))
