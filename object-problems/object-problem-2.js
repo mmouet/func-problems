@@ -36,4 +36,4 @@ const printNames = arrayOfObjects => {
   }
 };
 
-printNames(roster);
+printNames(roster); 
