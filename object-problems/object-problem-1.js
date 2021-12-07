@@ -6,6 +6,8 @@
 // Create an object
 // Use delete method in function
 
+
+/*
 let car = {
 	"Oil Level": "full",
 	"Engine": "off"
@@ -17,3 +19,19 @@ const removeObjectProp = (objectName, removeProp) => {
 };
 
 console.log(removeObjectProp(car, "Oil Level"))
+*/
+
+
+// SECOND ATTEMPT
+// Renamed keys to use camelCase
+let car = {
+	"oilLevel": "Full",
+	"engine": "Off"
+};
+
+const removeObjectProp = (objectName, removeProp) => {
+	delete objectName[removeProp];
+	return objectName
+};
+
+console.log(removeObjectProp(car, "oilLevel"))
